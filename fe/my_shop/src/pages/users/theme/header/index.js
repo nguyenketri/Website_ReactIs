@@ -109,23 +109,23 @@ const Header = () => {
                            >{menu?.name}
                            </Link>
                             
-                              { (menu?.child) ? 
-                                   <ul>
-                                    {
-                                        menu.child?.map((submenu,index) => {
-                                            return(
-                                              
-                                                <li key={index} className="sub_menu"
-                                                >  <Link to={submenu?.path}>
-                                                    {submenu?.name}
-                                                 </Link>   
-                                                    </li>
-                                                
-                                            )
-                                        })
-                                    }
-                                   </ul> : ""
-                                } 
+                            {
+                                menu.child && (
+                                    <ul className="header_menu_dropdown">
+                                        {
+                                            menu.child.map((item,index) => {
+                                                return(
+                                               <li key={index}>
+                                               <Link to={item.path}>{item.name}</Link>
+                                                </li>        
+                                                )
+                                            })
+                                        
+                                        }
+                                       
+                                    </ul>
+                                )
+                            }
                             
                         </li>
                             )
