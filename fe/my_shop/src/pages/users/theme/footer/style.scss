@@ -1,0 +1,33 @@
+@use "sass:map";
+@import "style/pages/theme";
+.footer{
+   .footer_about{
+    margin-bottom:30px;
+    
+   }
+   
+   .footer_about_logo{
+    margin-bottom: 15px;
+    display: inline-block;
+   }
+   .footer_about ul li {
+    font-size: 16px;
+    color: map.get($theme-colors,"normal-text");
+    line-height: 36px;
+    list-style: none;
+   }
+
+   .footer_icon ul{
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      justify-content: end;
+      margin: 10px 10px;
+      align-items: center;
+      li{
+         border: solid black;
+         border-radius: 20%;
+         padding: 2px 2px;
+      }
+   }
+}
