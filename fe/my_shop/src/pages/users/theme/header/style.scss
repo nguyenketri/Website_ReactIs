@@ -7,11 +7,11 @@
   .header_top {
     background: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 60px;
     color: white;
-    padding: 10px 10px;
+    padding: 15px 10px;
 
     p span {
       margin-left: 10px;
@@ -97,6 +97,62 @@
         margin-left: 10px;
         cursor: pointer;
       }
+
+   .icon_group {
+  display: flex;
+  align-items: center;
+  gap: 20px; // khoảng cách giữa 2 icon
+  margin-right: 15px;
+  // Dùng chung style cho cả giỏ hàng và tim
+  .cart_number,
+  .heart_number {
+    position: relative;
+    display: inline-block;
+
+    .style_icon {
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #1890ff;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: -6px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 50%;
+      height: 18px;
+      width: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid white;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+
+      // Hover nhẹ khi di chuột
+      .cart_number:hover &,
+      .heart_number:hover & {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  // Riêng màu badge có thể khác nhau
+  .heart_number span {
+    background: #e91e63; // hồng cho icon trái tim
+  }
+}
+
+
     }
 
     @media (min-width: 640px) {

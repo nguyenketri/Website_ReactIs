@@ -8,5 +8,8 @@ export const ROUTERS = {
     AIUTHEN: {
         LOGIN:'/login',
         REGISTER: "/signup"
+    },
+    CART:{
+        CART:"/cart"
     }
 }

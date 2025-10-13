@@ -4,12 +4,13 @@ import './style.scss';
 import { SearchOutlined } from "@ant-design/icons";
 import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
-
+import { MdAccountCircle } from "react-icons/md";
+import AccountMenu from "component/account/menuAccount";
 const Header = () => {
     const [activeMenu, setActiveMenu] = useState("home"); // lưu menu active
 
     const menuItems = [
-        { name: "Home", path: "home" },
+        { name: "Home", path: "" },
         { name: "Contact", path: "login" },
         { name: "About", path: "about" },
         { name: "Sign Up", path: "signup" },
@@ -29,7 +30,7 @@ const Header = () => {
             </div>
 
             <div className="header_container">
-                <h1>Exclusive</h1>
+                <h1><Link to="" style={{textDecoration:'none',color:'black',fontWeight:'bold'}}>Exclusive</Link></h1>
 
                 <nav>
                     <ul className="menu">
@@ -53,8 +54,19 @@ const Header = () => {
                 </div>
 
                 <div className="header_icon">
-                    <CiHeart className="style_icon" />
-                    <IoCartOutline className="style_icon" />
+               <div className="icon_group">
+  <p className="cart_number">
+   <Link to="cart"> <IoCartOutline className="style_icon" /></Link>
+    <span>5</span>
+  </p>
+
+  <p className="heart_number">
+    <CiHeart className="style_icon" />
+    <span>2</span>
+  </p>
+</div>
+
+                    <AccountMenu/>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ import ProfilePage from "./pages/users/profilePage";
 import LoginScreem  from  "./pages/authen/login";
 import LoginPage from "./pages/authen/login";
 import SignUPScreem from "pages/authen/sign_up/sign_up";
+import Cart from "pages/cart/cart";
 const renderUserRouter = () => {
     const userRouter = [
         {
@@ -25,6 +26,11 @@ const renderUserRouter = () => {
           {
             path: ROUTERS.AIUTHEN.REGISTER,
             component: <SignUPScreem/>
+        }
+        ,
+          {
+            path: ROUTERS.CART.CART,
+            component: <Cart/>
         }
     ]
 
