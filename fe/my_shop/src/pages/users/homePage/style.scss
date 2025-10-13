@@ -1,0 +1,39 @@
+.content {
+  .container {
+    background: white;
+    .container_banner {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      .nav_content {
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 50%;
+        border-bottom: 1px solid #eee;
+        border-right: 2px solid #eee;
+        margin-right: 10px;
+        ul{
+            display: flex;
+            flex-direction: column;
+            
+            align-items: self-start;
+            gap: 25px;
+            list-style: none;
+            li a{
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+            }
+        
+        }
+      }
+
+      .banner {
+        flex: 2;
+        width: 80%;
+        height: 400px; // tăng chiều cao hiển thị ảnh
+      }
+    }
+  }
+}
