@@ -3,7 +3,9 @@ import HomePage from "./pages/users/homePage";
 import { ROUTERS } from "./utils/router";
 import MasterLayout from "./pages/users/theme/masterLayout";
 import ProfilePage from "./pages/users/profilePage";
-
+import LoginScreem  from  "./pages/authen/login";
+import LoginPage from "./pages/authen/login";
+import SignUPScreem from "pages/authen/sign_up/sign_up";
 const renderUserRouter = () => {
     const userRouter = [
         {
@@ -13,6 +15,16 @@ const renderUserRouter = () => {
           {
             path: ROUTERS.USER.PROFILE,
             component: <ProfilePage/>
+        }
+        ,
+          {
+            path: ROUTERS.AIUTHEN.LOGIN,
+            component: <LoginPage/>
+        }
+        ,
+          {
+            path: ROUTERS.AIUTHEN.REGISTER,
+            component: <SignUPScreem/>
         }
     ]
 

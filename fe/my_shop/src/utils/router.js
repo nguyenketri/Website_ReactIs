@@ -4,5 +4,9 @@ export const ROUTERS = {
         PROFILE: "/profile",
         PRODUCT: "/product",
        
+    },
+    AIUTHEN: {
+        LOGIN:'/login',
+        REGISTER: "/signup"
     }
 }
